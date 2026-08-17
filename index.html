@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js')</script>
+<title>Veritas Bridge Partners™ — Evidence-based organizational standing</title>
+<meta name="description" content="Independent, evidence-based documentation of Latin American and Caribbean organizations' standing, so funders can decide with confidence. We document what the evidence shows; the decision stays yours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy-deep:#152039; --ink:#23262B; --muted:#565B63;
+    --paper:#F4F6F8; --white:#FFFFFF;
+    --terra:#B0562F; --gold:#B48A2E; --teal:#1E7A6F;
+    --line:#DCE1E8; --line-soft:#E8ECF1;
+    --serif:"Spectral","Palatino Linotype",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    --wrap:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17.5px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.14;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+
+  .tag{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--terra)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(244,246,248,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .name{font-family:var(--serif);font-weight:600;font-size:18.5px;color:var(--navy);letter-spacing:.005em}
+  .brand .name sup{font-size:.5em;color:var(--gold);top:-.9em}
+  nav.links{display:flex;align-items:center;gap:28px}
+  nav.links a{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--navy);opacity:.8;transition:opacity .2s}
+  nav.links a:hover{opacity:1}
+  .cta{display:inline-block;background:var(--navy);color:var(--paper)!important;padding:11px 20px;font-size:12.5px;font-weight:600;transition:background .2s;opacity:1!important}
+  .cta:hover{background:var(--terra)}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .menu-btn span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;transition:.25s}
+
+  .hero{background:var(--navy);color:var(--paper);position:relative;overflow:hidden}
+  .hero-inner{padding:100px 0 108px;position:relative;z-index:2}
+  .hero .eyebrow{color:var(--gold)}
+  .hero h1{color:#fff;font-size:clamp(33px,5.3vw,58px);font-weight:600;letter-spacing:-.01em;margin:22px 0 26px;max-width:16ch}
+  .hero h1 em{font-style:italic;color:#E7C46A;font-weight:500}
+  .hero .lede{font-family:var(--serif);font-size:clamp(18px,2.2vw,22px);font-weight:400;max-width:54ch;color:#D9DEE8;line-height:1.55}
+  .hero .tagline{margin-top:38px;padding-top:24px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:#C7CEDB;text-transform:uppercase}
+  .hero .tagline b{color:#fff;font-weight:600}
+  .motif{position:absolute;right:-40px;bottom:0;width:560px;max-width:54vw;opacity:.16;z-index:1;pointer-events:none}
+
+  section{padding:84px 0}
+  .sec-head{max-width:62ch}
+  .sec-head h2{font-size:clamp(26px,3.4vw,37px);margin:13px 0 0;letter-spacing:-.005em}
+  .rule{width:44px;height:3px;background:var(--terra);margin-bottom:2px}
+
+  .moment{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .moment .body{max-width:60ch;margin-top:24px}
+  .moment .body p+p{margin-top:16px}
+  .moment .pull{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);color:var(--navy);line-height:1.34;font-weight:500;margin-top:28px;padding-left:24px;border-left:3px solid var(--gold)}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+  .card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--terra);padding:34px 32px;display:flex;flex-direction:column}
+  .card:nth-child(2){border-top-color:var(--teal)}
+  .card .k{margin-bottom:14px;color:var(--gold)}
+  .card h3{font-size:23px;margin-bottom:13px}
+  .card p{font-size:16px;color:#45494F;line-height:1.6}
+  .card .foot{margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft);font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+
+  .traits{display:grid;grid-template-columns:repeat(3,1fr);margin-top:50px;border-top:1px solid var(--line)}
+  .trait{padding:28px 24px 6px;border-right:1px solid var(--line)}
+  .trait:last-child{border-right:0}
+  .trait .n{font-family:var(--mono);font-size:12px;color:var(--terra);letter-spacing:.1em}
+  .trait h4{font-size:19px;color:var(--navy);margin:9px 0 8px}
+  .trait p{font-size:15px;color:#45494F}
+
+  .identity{background:var(--terra);color:#fff;text-align:center;padding:0}
+  .identity .wrap{padding:64px 28px}
+  .identity p{font-family:var(--serif);font-size:clamp(23px,3.4vw,33px);font-weight:500;line-height:1.3;max-width:20ch;margin:0 auto}
+  .identity small{display:block;margin-top:18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#F6E1D8}
+
+  .orgs{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .orgs .rule{background:var(--teal)}
+  .orgs .eyebrow{color:var(--teal)}
+  .orgs .body{max-width:60ch;margin-top:22px}
+  .orglist{list-style:none;margin-top:26px;display:grid;gap:14px}
+  .orglist li{position:relative;padding-left:26px;font-size:16px;color:#3f4349}
+  .orglist li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;background:var(--teal);transform:rotate(45deg)}
+  .orglist li b{color:var(--navy);font-weight:600}
+
+  .founder{background:var(--paper)}
+  .founder-grid{display:grid;grid-template-columns:.85fr 1.5fr;gap:48px;align-items:start;margin-top:18px}
+  .founder .monogram{aspect-ratio:1;background:var(--navy);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .founder .monogram svg{width:58%}
+  .founder h2{font-size:clamp(24px,3.1vw,32px)}
+  .founder .role{font-family:var(--mono);color:var(--terra);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 16px}
+  .founder p{max-width:56ch;font-size:17px;color:#3b3f45}
+  .founder p+p{margin-top:15px}
+  .creds{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
+  .creds span{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--navy);background:var(--white);border:1px solid var(--line);padding:8px 13px}
+
+  .team{margin-top:46px;border-top:1px solid var(--line);padding-top:34px}
+  .team .tlede{max-width:64ch;margin-top:14px;font-size:16.5px;color:#3f4349;line-height:1.6}
+  .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:32px}
+  .adv .nm{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--navy);line-height:1.2}
+  .adv .rl{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin:7px 0 11px}
+  .adv p{font-size:14.5px;color:#4a4e54;line-height:1.55}
+
+  .contact{background:var(--navy);color:var(--paper)}
+  .contact .wrap{padding:80px 28px;text-align:center}
+  .contact .eyebrow{color:var(--gold)}
+  .contact h2{color:#fff;font-size:clamp(26px,3.6vw,39px);margin:15px auto 16px;max-width:24ch}
+  .contact p{max-width:52ch;margin:0 auto 32px;color:#D9DEE8;font-size:17.5px}
+  .contact .email{display:inline-block;font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);color:#fff;border-bottom:2px solid var(--gold);padding-bottom:4px}
+  .contact .email:hover{color:#E7C46A}
+  .contact .note{margin-top:28px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#96A1B7}
+
+  footer{background:var(--navy-deep);color:#AEB7C8}
+  footer .wrap{padding:36px 28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+  footer .fbrand{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--serif);font-size:16px}
+  footer .fbrand sup{color:var(--gold);font-size:.55em}
+  footer .ftag{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#C2CAD8}
+  footer .fine{width:100%;border-top:1px solid #26324f;padding-top:16px;font-size:12.5px;line-height:1.6;color:#8C97AC}
+
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .js .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:820px){
+    nav.links{position:fixed;inset:68px 0 auto 0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 20px;border-bottom:1px solid var(--line);transform:translateY(-150%);transition:transform .3s;box-shadow:0 12px 24px rgba(27,42,74,.08)}
+    nav.links.open{transform:none}
+    nav.links a{padding:14px 0;width:100%;border-bottom:1px solid var(--line);font-size:14px}
+    nav.links .cta{margin-top:12px;border-bottom:0;text-align:center}
+    .menu-btn{display:block}
+    .cards{grid-template-columns:1fr}
+    .traits{grid-template-columns:1fr}
+    .trait{border-right:0;border-bottom:1px solid var(--line);padding-bottom:22px}
+    .founder-grid{grid-template-columns:1fr;gap:28px}
+    .founder .monogram{max-width:210px}
+    .adv-grid{grid-template-columns:1fr;gap:24px}
+    .motif{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- light-background mark: navy / terra / gold -->
+  <symbol id="mark" viewBox="0 0 144 60">
+    <g fill="none" stroke-width="3.6">
+      <polygon points="28,6 50,30 28,54 6,30" stroke="#1B2A4A"/>
+      <polygon points="72,6 94,30 72,54 50,30" stroke="#B0562F"/>
+      <polygon points="116,6 138,30 116,54 94,30" stroke="#B48A2E"/>
+    </g>
+    <g font-family="Spectral,serif" font-size="14" font-weight="700" text-anchor="middle">
+      <text x="28" y="35" fill="#1B2A4A">V</text>
+      <text x="72" y="35" fill="#B0562F">B</text>
+      <text x="116" y="35" fill="#B48A2E">P</text>
+    </g>
+  </symbol>
+  <!-- dark-background mark: first diamond + V become light so nothing disappears on navy -->
+  <symbol id="mark-d" viewBox="0 0 144 60">
+    <g fill="none" stroke-width="3.6">
+      <polygon points="28,6 50,30 28,54 6,30" stroke="#F4F6F8"/>
+      <polygon points="72,6 94,30 72,54 50,30" stroke="#CE7A4F"/>
+      <polygon points="116,6 138,30 116,54 94,30" stroke="#CBA24B"/>
+    </g>
+    <g font-family="Spectral,serif" font-size="14" font-weight="700" text-anchor="middle">
+      <text x="28" y="35" fill="#F4F6F8">V</text>
+      <text x="72" y="35" fill="#CE7A4F">B</text>
+      <text x="116" y="35" fill="#CBA24B">P</text>
+    </g>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Veritas Bridge Partners home">
+      <svg width="72" height="30" viewBox="0 0 144 60" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="name">Veritas Bridge Partners<sup>™</sup></span>
+    </a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="links" id="nav">
+      <a href="#moment">The gap</a>
+      <a href="#products">What we do</a>
+      <a href="#orgs">For organizations</a>
+      <a href="#founder">Who we are</a>
+      <a class="cta" href="#contact">Request a conversation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding:0">
+    <svg class="motif" viewBox="0 0 600 220" aria-hidden="true">
+      <path d="M20,196 Q300,86 580,196" fill="none" stroke="#B48A2E" stroke-width="2"/>
+      <g stroke="#E7C46A" stroke-width="1.4">
+        <line x1="90" y1="150" x2="90" y2="196"/>
+        <line x1="172" y1="128" x2="172" y2="196"/>
+        <line x1="254" y1="112" x2="254" y2="196"/>
+        <line x1="300" y1="106" x2="300" y2="196"/>
+        <line x1="346" y1="112" x2="346" y2="196"/>
+        <line x1="428" y1="128" x2="428" y2="196"/>
+        <line x1="510" y1="150" x2="510" y2="196"/>
+      </g>
+      <line x1="20" y1="196" x2="580" y2="196" stroke="#B0562F" stroke-width="1.4"/>
+    </svg>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Global standards · Local intelligence</p>
+      <h1>The evidence beneath a <em>defensible</em> decision in Latin America.</h1>
+      <p class="lede">Veritas Bridge Partners produces independent, evidence-based documentation of Latin American and Caribbean organizations' standing — so funders have a clear, verified picture before they commit. We document what an organization has built and can demonstrate. The decision stays yours.</p>
+      <p class="tagline"><b>The evidence supporting your decision.</b></p>
+    </div>
+  </section>
+
+  <section class="moment" id="moment">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">The evidence gap</p>
+        <h2>Funding decisions rest on less evidence than the stakes deserve.</h2>
+      </div>
+      <div class="body">
+        <p>Funders making decisions about organizations in Latin America and the Caribbean have long relied on relationships, references, and reputation. That knowledge is real — but it's uneven, hard to verify, and rarely written down. Independent, documented evidence of what an organization has actually built has always been the scarce part.</p>
+        <p>The recent drawdown of U.S. development funding, including USAID, has thinned the shared reference points many funders once leaned on, leaving more of that judgment to each funder with less to go on. The need for independent evidence isn't new — it's simply harder to meet now.</p>
+        <p class="pull">Veritas Bridge Partners provides that evidence: an independent, documented account of where an organization stands — so a decision can rest on more than reputation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">What we do</p>
+        <h2>Two documents. One clear read on any prospective grantee.</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="k tag">The standing profile</div>
+          <h3>The BRIDGE Profile™</h3>
+          <p>An independent, evidence-based account of an organization's standing across seven dimensions — The Seven Pillars of Organizational Standing™. Every reading is drawn from documented, independently verified evidence: a one-page card your committee can read at a glance, backed by a full report that shows the reasoning behind it.</p>
+          <div class="foot">Standing, documented — never a grade, never a verdict</div>
+        </div>
+        <div class="card">
+          <div class="k tag">The verification</div>
+          <h3>The Due Diligence Review</h3>
+          <p>A factual verification of legal standing, operational existence, and integrity — registration, financials, sanctions and watchlist screening. Every finding is sourced, with the verification method documented, so the facts a funder needs are confirmed before capital moves.</p>
+          <div class="foot">Legal standing · operational verification · integrity screening</div>
+        </div>
+      </div>
+
+      <div class="traits">
+        <div class="trait">
+          <div class="n">/ 01</div>
+          <h4>Independent verification</h4>
+          <p>We confirm what we can without the organization's help — pulling public records ourselves and reaching community members, officials, and peers directly. For every finding, we can name the document and how it was verified.</p>
+        </div>
+        <div class="trait">
+          <div class="n">/ 02</div>
+          <h4>We see what thin paperwork hides</h4>
+          <p>Our method is built so an effective grassroots organization is not penalized for working where formal documentation is scarce. You never mistake missing documents for missing capability.</p>
+        </div>
+        <div class="trait">
+          <div class="n">/ 03</div>
+          <h4>We document; you decide</h4>
+          <p>We never issue a funding recommendation or a pass/fail grade. We tell you what the evidence shows — the decision, and the credit for it, remain entirely yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="identity" aria-label="Our position">
+    <div class="wrap">
+      <p>We document standing. You decide.</p>
+      <small>Evidenced and verified — so the judgment of whom to fund stays where it belongs</small>
+    </div>
+  </section>
+
+  <section class="orgs" id="orgs">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">For organizations</p>
+        <h2>If a funder has invited you to take part.</h2>
+      </div>
+      <div class="body">
+        <p>A BRIDGE Profile™ is a chance to have your work seen clearly, on your own terms — an independent account of what your organization has built, written to be shared with funders who want to understand you.</p>
+        <ul class="orglist">
+          <li><b>It is not an audit, a grade, or a pass/fail test</b>, and it does not decide whether anyone funds you.</li>
+          <li><b>Your evidence counts in whatever form it lives</b> — a handwritten log, a community assembly's minutes, a message thread where a real decision was made.</li>
+          <li><b>You are considered in light of what you are.</b> A small, community-rooted organization is never held to the paperwork of a large, well-funded one.</li>
+          <li><b>The results are yours.</b> You decide whether, when, and with whom to share them.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder" id="founder">
+    <div class="wrap reveal">
+      <div class="sec-head"><div class="rule"></div><p class="eyebrow">Who we are</p></div>
+      <div class="founder-grid">
+        <div class="monogram" aria-hidden="true"><svg viewBox="0 0 144 60"><use href="#mark-d"/></svg></div>
+        <div>
+          <h2>Twenty-five years of institutional philanthropy, turned into evidence.</h2>
+          <p>Veritas Bridge Partners was founded after a career spent inside the institutions that deploy philanthropic capital — watching capable funders make high-stakes decisions about Latin American and Caribbean organizations with far less independent evidence than the stakes deserved. The firm exists to produce that evidence, to a consistent standard, for the funders who need it.</p>
+          <p>Our anchor markets are Colombia and the Dominican Republic, with expansion driven by documented funder demand.</p>
+        </div>
+      </div>
+
+      <div class="team">
+        <p class="eyebrow">Team &amp; advisors</p>
+        <p class="tlede">Veritas Bridge Partners works with specialists whose expertise anchors the areas our reviews depend on, under defined roles and conflict-of-interest discipline.</p>
+        <div class="adv-grid">
+          <div class="adv">
+            <div class="nm">Joaquín Labour-Acosta</div>
+            <div class="rl">Founder</div>
+            <p>Twenty-five years in institutional philanthropy — Heron Foundation, Rockefeller Philanthropy Advisors, and Prudential Foundation.</p>
+          </div>
+          <div class="adv">
+            <div class="nm">Seneida Alcántara</div>
+            <div class="rl">Financial Integrity Advisor</div>
+            <p>A Dominican finance and accounting professional with experience in nonprofit financial administration, budgeting, and internal controls — including work with Fundación Intermón Oxfam in the Dominican Republic — and familiarity with nonprofit auditing standards and donor-compliance frameworks.</p>
+          </div>
+          <div class="adv">
+            <div class="nm">Gianella Pereira Lluberas</div>
+            <div class="rl">Organizational Development Advisor</div>
+            <p>Founding Partner of the consulting firm BRAMFOR, with a background in organizational development, HR systems, institutional policies and structures, and performance management, and postgraduate study in strategic human-resources management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap reveal">
+      <p class="eyebrow">Start a conversation</p>
+      <h2>See a complete demonstration profile.</h2>
+      <p>The one-page card, the full report, and the due-diligence review — so you can judge the rigor for yourself.</p>
+      <a class="email" href="mailto:hello@veritasbridge.global">hello@veritasbridge.global</a>
+      <p class="note">Founding engagements now open · Confidential throughout</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <svg width="67" height="28" viewBox="0 0 144 60" aria-hidden="true"><use href="#mark-d"/></svg>
+      Veritas Bridge Partners<sup>™</sup>
+    </div>
+    <div class="ftag">The evidence supporting your decision</div>
+    <div class="fine">
+      The BRIDGE Profile™ and The Seven Pillars of Organizational Standing™ document evidenced organizational standing. They do not measure organizational effectiveness directly, and are not an audit, a score, or a funding recommendation. © <span id="yr"></span> Veritas Bridge Partners. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);});});
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }
+</script>
+</body>
+</html>
