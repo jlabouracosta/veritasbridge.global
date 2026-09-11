@@ -6,6 +6,17 @@
 <script>document.documentElement.classList.add('js')</script>
 <title>Veritas Bridge Partners™ — Evidence-based organizational standing</title>
 <meta name="description" content="Independent, evidence-based documentation of Latin American and Caribbean organizations' standing, so funders can decide with confidence. We document what the evidence shows; the decision stays yours.">
+<link rel="canonical" href="https://veritasbridge.global/">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2060%2060'%3E%3Cpolygon%20points='30,4%2056,30%2030,56%204,30'%20fill='%231B2A4A'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Veritas Bridge Partners">
+<meta property="og:title" content="Veritas Bridge Partners — Independent, evidence-based standing for LAC organizations">
+<meta property="og:description" content="Independent, evidence-based documentation of Latin American and Caribbean organizations' standing, so funders can decide with confidence. We document the evidence; the decision remains yours.">
+<meta property="og:url" content="https://veritasbridge.global/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Veritas Bridge Partners — Evidence-based organizational standing">
+<meta name="twitter:description" content="Independent, evidence-based documentation of LAC organizations' standing, so funders can decide with confidence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -143,9 +154,42 @@
     .founder .monogram{max-width:210px}
     .adv-grid{grid-template-columns:1fr;gap:24px}
     .motif{display:none}
+    .flow{grid-template-columns:1fr}
+    .step{border-right:0;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .links .navitem{height:auto;display:block;width:100%;border-bottom:1px solid var(--line)}
+    .links .navlink{width:100%;justify-content:space-between;padding:14px 0;font-size:14px;border-bottom:0}
+    .links .submenu{position:static;box-shadow:none;border:0;min-width:0;background:transparent;padding:0 0 8px 14px}
+    .links .submenu a{border-bottom:0;padding:11px 0;font-size:13px;width:auto}
   }
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none;opacity:1;transform:none}}
+  /* --- added sections --- */
+  .band-white{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .keyline{font-family:var(--serif);font-size:clamp(19px,2.4vw,24px);color:var(--navy);font-weight:500;line-height:1.34;margin-top:30px;padding-left:24px;border-left:3px solid var(--gold);max-width:62ch}
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:44px;border-top:1px solid var(--line)}
+  .step{padding:26px 22px 10px;border-right:1px solid var(--line)}
+  .step:last-child{border-right:0}
+  .step .sn{font-family:var(--mono);font-size:12px;color:var(--terra);letter-spacing:.1em}
+  .step h4{font-size:17px;color:var(--navy);margin:10px 0 8px;line-height:1.2}
+  .step p{font-size:13.5px;color:#45494F;line-height:1.55}
+  #receive .body{max-width:62ch;margin-top:22px}
+  #why .prose{max-width:62ch;margin-top:22px}
+  #why .prose p+p{margin-top:16px}
+  /* dropdown nav */
+  .links .navitem{position:relative;height:68px;display:flex;align-items:center}
+  .links .navlink{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--navy);opacity:.8;background:none;border:0;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:6px;transition:opacity .2s}
+  .links .navlink:hover{opacity:1}
+  .links .caret{font-size:9px;line-height:1;opacity:.7;transition:transform .2s}
+  .links .navitem.open .caret{transform:rotate(180deg)}
+  .links .submenu{position:absolute;top:100%;left:0;min-width:212px;background:var(--white);border:1px solid var(--line);box-shadow:0 14px 30px rgba(27,42,74,.12);display:none;flex-direction:column;z-index:60}
+  .links .navitem.open>.submenu{display:flex}
+  .links .submenu a{padding:12px 16px;border-bottom:1px solid var(--line-soft);white-space:nowrap;opacity:.85;width:auto}
+  .links .submenu a:last-child{border-bottom:0}
+  .links .submenu a:hover{opacity:1;background:var(--paper)}
+  section[id]{scroll-margin-top:84px}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Veritas Bridge Partners","url":"https://veritasbridge.global/","email":"jlabour@veritasbridge.global","description":"Independent, evidence-based documentation of Latin American and Caribbean organizations' standing, produced for funders. Veritas documents the evidence; the funding decision remains the funder's.","founder":{"@type":"Person","name":"Joaquín A. Labour-Acosta"},"areaServed":"Latin America and the Caribbean","knowsAbout":["organizational due diligence","nonprofit assessment","independent verification","grantmaking due diligence"]}
+</script>
 </head>
 <body>
 
@@ -186,11 +230,30 @@
     </a>
     <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="links" id="nav">
-      <a href="#products">What we do</a>
-      <a href="#funds">For Funders</a>
-      <a href="#orgs">For organizations</a>
-      <a href="#founder">Who we are</a>
-      <a class="cta" href="#contact">Request a conversation</a>
+      <div class="navitem has-sub">
+        <button class="navlink" aria-haspopup="true" aria-expanded="false">Why Veritas<span class="caret" aria-hidden="true">▾</span></button>
+        <div class="submenu">
+          <a href="#why">Why now</a>
+          <a href="#risks">What's at stake</a>
+        </div>
+      </div>
+      <div class="navitem has-sub">
+        <button class="navlink" aria-haspopup="true" aria-expanded="false">What we do<span class="caret" aria-hidden="true">▾</span></button>
+        <div class="submenu">
+          <a href="#products">Our products</a>
+          <a href="#how">How it works</a>
+          <a href="#receive">What you receive</a>
+        </div>
+      </div>
+      <div class="navitem has-sub">
+        <button class="navlink" aria-haspopup="true" aria-expanded="false">Who it's for<span class="caret" aria-hidden="true">▾</span></button>
+        <div class="submenu">
+          <a href="#funds">For funders</a>
+          <a href="#orgs">For organizations</a>
+        </div>
+      </div>
+      <div class="navitem"><a class="navlink" href="#founder">About</a></div>
+      <a class="cta" href="#contact">Request a sample</a>
     </nav>
   </div>
 </header>
@@ -214,7 +277,46 @@
     <div class="wrap hero-inner">
       <p class="eyebrow">Global standards · Local intelligence</p>
       <h1>The evidence beneath a <em>defensible</em> decision in Latin America.</h1>
-      <p class="lede">Veritas Bridge Partners builds a trusted connection between the organizations doing the work in Latin America and the Caribbean and the funders who support them. We produce an independent, evidence-based account of an organization's standing — so funders can see clearly what an organization has built, and organizations are seen accurately, in the terms funders trust. We document the evidence; the decision remains yours.</b></p>
+      <p class="lede">Veritas Bridge Partners builds a trusted connection between the organizations doing the work in Latin America and the Caribbean and the funders who support them. We produce an independent, evidence-based account of an organization's standing — so funders can see clearly what an organization has built, and organizations are seen accurately, in the terms funders trust. We document the evidence; the decision remains yours.</p>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">Why now</p>
+        <h2>The institutional landscape has changed. The need for evidence has not.</h2>
+      </div>
+      <div class="prose">
+        <p>For years, funders placing capital across Latin America and the Caribbean could lean on a broader ecosystem — bilateral agencies, implementing partners, monitoring systems, and accumulated institutional knowledge about which organizations were credible. That ecosystem was never perfect, but it was a shared layer of reference.</p>
+        <p>The restructuring of U.S. foreign assistance, including the dismantling of USAID, has fragmented part of that infrastructure. As centralized reference points become less predictable, the work of understanding an organization falls more heavily on each funder — often without the field presence to carry it.</p>
+        <p>The question that remains is a practical one: who independently verifies what the available documentation actually shows? That is the gap Veritas Bridge Partners was built to close.</p>
+      </div>
+      <p class="keyline">When institutional infrastructure changes, independent evidence matters more.</p>
+    </div>
+  </section>
+
+  <section class="band-white" id="risks">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">What's at stake</p>
+        <h2>Every funding decision carries two risks.</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="k tag">False positive</div>
+          <h3>Funding the wrong organization</h3>
+          <p>Committing capital to an organization whose apparent capacity, governance, or controls do not hold up to closer, independent examination.</p>
+        </div>
+        <div class="card">
+          <div class="k tag">False negative</div>
+          <h3>Overlooking the right one</h3>
+          <p>Passing over a capable, community-rooted organization because its evidence of strength does not fit the shape of conventional due diligence.</p>
+        </div>
+      </div>
+      <p class="keyline">A BRIDGE Profile™ helps funders reduce both — through independent evidence, verification, and regional context, so consequential decisions are made with greater confidence.</p>
     </div>
   </section>
 
@@ -260,6 +362,43 @@
     </div>
   </section>
 
+  <section class="band-white" id="how">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">How it works</p>
+        <h2>How a review is built.</h2>
+      </div>
+      <div class="flow">
+        <div class="step"><div class="sn">/ 01</div><h4>Context &amp; scope</h4><p>We establish the organization's operating context, its Context Band, and the scope of the review.</p></div>
+        <div class="step"><div class="sn">/ 02</div><h4>Evidence gathering</h4><p>We collect documentary evidence across the Seven Pillars — from the organization and from independent sources.</p></div>
+        <div class="step"><div class="sn">/ 03</div><h4>Independent verification</h4><p>We confirm what we can without the organization's help: public records, community members, officials, and peers.</p></div>
+        <div class="step"><div class="sn">/ 04</div><h4>Contextual analysis</h4><p>We weigh the evidence against the organization's stage, resources, and operating environment.</p></div>
+        <div class="step"><div class="sn">/ 05</div><h4>The Profile</h4><p>We produce the one-page card and the full report — what the evidence shows, and how each finding was verified.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="receive">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">What you receive</p>
+        <h2>A documented evidence base you can act on.</h2>
+      </div>
+      <div class="body">
+        <ul class="orglist">
+          <li><b>The Dimensions Card</b> — a one-page summary your committee can read at a glance.</li>
+          <li><b>The full BRIDGE Profile™ report</b> — each of the Seven Pillars rated against verified evidence, with the reasoning shown behind every reading.</li>
+          <li><b>The Due Diligence Review</b> — legal standing, operational existence, and integrity, each finding sourced.</li>
+          <li><b>The evidence &amp; verification record</b> — the documents reviewed, their reliability, and how each was confirmed.</li>
+          <li><b>Context &amp; limitations</b> — the operating environment, and an honest account of what the review can and cannot establish.</li>
+        </ul>
+        <p class="keyline">The result is not a recommendation to fund. It is a documented, defensible evidence base for your own decision.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="identity" aria-label="Our position">
     <div class="wrap">
       <p>We document standing. You decide.</p>
@@ -276,14 +415,13 @@
         <br>
       </div>
       <div class="body">
-        <p>A BRIDGE Profile™ provides independent, evidence-based documentation of an organization's governance, operations, financial stewardship, and demonstrated capacity. It is designed to supplement, not replace, your existing grantmaking, compliance, and decision-making processes.</p>
+        <p>A BRIDGE Profile™ provides independent, evidence-based documentation of an organization's governance, operations, financial stewardship, and demonstrated capacity — designed to supplement, not replace, your existing grantmaking, compliance, and decision-making processes.</p>
         <ul class="orglist">
-          <li><b>It is not a funding recommendation, grant approval, or investment opinion.</b> We do not determine who should receive funding, nor do we advocate for any organization.</li>
-          <li><b>It is not fundraising, grant administration, or fiscal sponsorship.</b> We do not raise funds, manage donor relationships, administer grants, or serve as an intermediary between funders and recipients.</li>
-          <li><b>It strengthens due diligence and compliance processes.</b> Our role is to provide independently verified evidence and regional context that can strengthen your own assessments and decision-making frameworks.</li>
-          <li><b>It provides context.</b> Organizations are assessed relative to their operating environment, resources, and stage of development, recognizing the realities of working across Latin America and the Caribbean.</li>
-          <li><b>The decision remains yours.</b> Our responsibility is to produce objective, evidence-based assessments. How that information informs funding, compliance, or risk decisions is entirely up to you.</li>
+          <li><b>It strengthens your due diligence.</b> Independently verified evidence and regional context that reinforce your own assessments and decision-making frameworks.</li>
+          <li><b>It reads organizations in context.</b> Each is considered relative to its operating environment, resources, and stage of development — the realities of working across Latin America and the Caribbean.</li>
+          <li><b>The decision stays yours.</b> How the evidence informs funding, compliance, or risk decisions is entirely up to you.</li>
         </ul>
+        <p class="keyline">Independent evidence, not a funding verdict. We do not recommend whom to fund, raise or administer funds, act as an intermediary, or substitute for legal, audit, or compliance counsel.</p>
       </div>
     </div>
 </section>
@@ -313,10 +451,9 @@
       <div class="founder-grid">
         <div class="monogram" aria-hidden="true"><svg viewBox="0 0 128 60"><use href="#mark-d"/></svg></div>
         <div>
-          <h2>Over two decades of institutional philanthropy, turned into evidence.</h2></p>
-          <p>Veritas Bridge Partners was founded by Joaquin A. Labour-Acosta, an information systems and data intelligence expert whose career spans both technology and institutional philanthropy. Beginning with the design and implementation of information systems, he later applied data-driven decision frameworks, compliance oversight, and due diligence practices within institutions responsible for deploying philanthropic capital across multiple regions of the world, including Rockefeller Philanthropy Advisors, one of the world's largest philanthropic service organizations.</p>
-          </p>Over twenty years working at the intersection of grantmaking operations, risk management, compliance, and organizational review, he came to see a persistent gap — not of goodwill, but of shared understanding. Funders are often asked to make consequential decisions without independent evidence equal to the stakes, while the organizations doing the work are just as often unable to show their real strength in terms funders can recognize. The two sides want the same thing and struggle to see each other clearly. Veritas Bridge Partners was founded to close that distance: producing rigorous, independent evidence of where an organization stands, so funders can act with confidence and organizations are understood for what they have genuinely built. We document the evidence; the decision remains yours.</p>
-          <p>
+          <h2>Nearly two decades of institutional philanthropy, turned into evidence.</h2>
+          <p>Veritas Bridge Partners was founded by Joaquín A. Labour-Acosta, an information systems and data intelligence expert whose career spans both technology and institutional philanthropy. Beginning with the design and implementation of information systems, he later applied data-driven decision frameworks, compliance oversight, and due diligence practices within institutions responsible for deploying philanthropic capital across multiple regions of the world, including Rockefeller Philanthropy Advisors, one of the world's largest philanthropic service organizations.</p>
+          <p>Across nearly two decades working at the intersection of grantmaking operations, risk management, compliance, and organizational review, he came to see a persistent gap — not of goodwill, but of shared understanding. Funders are often asked to make consequential decisions without independent evidence equal to the stakes, while the organizations doing the work are just as often unable to show their real strength in terms funders can recognize. The two sides want the same thing and struggle to see each other clearly. Veritas Bridge Partners was founded to close that distance: producing rigorous, independent evidence of where an organization stands, so funders can act with confidence and organizations are understood for what they have genuinely built. We document the evidence; the decision remains yours.</p>
         </div>
       </div>
 
@@ -346,7 +483,7 @@
       <p class="eyebrow">Start a conversation</p>
       <h2>See a complete demonstration profile.</h2>
       <p>The one-page card, the full report, and the due-diligence review — so you can judge the rigor for yourself.</p>
-      <a class="email" href="mailto:hello@veritasbridge.global">hello@veritasbridge.global</a>
+      <a class="email" href="mailto:jlabour@veritasbridge.global">jlabour@veritasbridge.global</a>
       <p class="note">Founding engagements now open · Confidential throughout</p>
     </div>
   </section>
@@ -369,8 +506,11 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
-  btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);});});
+  function closeSubs(){document.querySelectorAll('.navitem.has-sub.open').forEach(function(o){o.classList.remove('open');var b=o.querySelector('.navlink');if(b)b.setAttribute('aria-expanded','false');});}
+  btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);if(!open)closeSubs();});
+  document.querySelectorAll('.navitem.has-sub > .navlink').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var item=b.parentElement,willOpen=!item.classList.contains('open');closeSubs();if(willOpen){item.classList.add('open');b.setAttribute('aria-expanded','true');}});});
+  document.addEventListener('click',function(e){if(!e.target.closest('.navitem.has-sub'))closeSubs();});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);closeSubs();});});
   if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
