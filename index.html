@@ -90,6 +90,14 @@
   .trait h4{font-size:19px;color:var(--navy);margin:9px 0 8px}
   .trait p{font-size:15px;color:#45494F}
 
+  .pillars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+  .pillar{background:var(--white);padding:24px 22px}
+  .pillar .pn{font-family:var(--mono);font-size:12px;color:var(--terra);letter-spacing:.1em}
+  .pillar h4{font-family:var(--serif);font-size:17px;color:var(--navy);margin:9px 0 8px;line-height:1.25;font-weight:600}
+  .pillar p{font-size:13.5px;color:#45494F;line-height:1.55}
+  .pillar-brand{display:flex;align-items:center;justify-content:center;background:var(--navy)}
+  .pillar-brand svg{width:74px;height:auto}
+
   .identity{background:var(--terra);color:#fff;text-align:center;padding:0}
   .identity .wrap{padding:64px 28px}
   .identity p{font-family:var(--serif);font-size:clamp(23px,3.4vw,33px);font-weight:500;line-height:1.3;max-width:20ch;margin:0 auto}
@@ -158,7 +166,8 @@
     .founder .monogram{max-width:210px}
     .adv-grid{grid-template-columns:1fr;gap:24px}
     .motif{display:none}
-    .flow{grid-template-columns:1fr;gap:24px}
+    .flow{grid-template-columns:1fr;gap:24px}    
+    .pillars-grid{grid-template-columns:1fr}
     .links .navitem{height:auto;display:block;width:100%;border-bottom:1px solid var(--line)}
     .links .navlink{width:100%;justify-content:space-between;padding:14px 0;font-size:14px;border-bottom:0}
     .links .submenu{position:static;box-shadow:none;border:0;min-width:0;background:transparent;padding:0 0 8px 14px}
@@ -183,6 +192,7 @@
   .links .submenu a:last-child{border-bottom:0}
   .links .submenu a:hover{opacity:1;background:var(--paper)}
   section[id]{scroll-margin-top:84px}
+  #about-founder{scroll-margin-top:96px}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Veritas Bridge Partners","url":"https://veritasbridge.global/","email":"jlabour@veritasbridge.global","description":"Independent, evidence-based documentation of Latin American and Caribbean organizations' standing, produced for funders. Veritas documents the evidence; the funding decision remains the funder's.","founder":{"@type":"Person","name":"Joaquín A. Labour-Acosta"},"areaServed":"Latin America and the Caribbean","knowsAbout":["organizational due diligence","nonprofit assessment","independent verification","grantmaking due diligence"]}
@@ -239,6 +249,7 @@
         <div class="submenu">
           <a href="#products">Our products</a>
           <a href="#how">How it works</a>
+          <a href="#pillars">The Seven Pillars</a>
           <a href="#receive">What you receive</a>
         </div>
       </div>
@@ -249,7 +260,13 @@
           <a href="#orgs">For organizations</a>
         </div>
       </div>
-      <div class="navitem"><a class="navlink" href="#founder">About</a></div>
+           <div class="navitem has-sub">
+        <button class="navlink" aria-haspopup="true" aria-expanded="false">About<span class="caret" aria-hidden="true">▾</span></button>
+        <div class="submenu">
+          <a href="#founder">Why we exist</a>
+          <a href="#about-founder">Who stands behind the work</a>
+        </div>
+      </div>
       <a class="cta" href="#contact">Request a sample</a>
     </nav>
   </div>
@@ -376,6 +393,27 @@
     </div>
   </section>
 
+  <section class="band-white" id="pillars">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <div class="rule"></div>
+        <p class="eyebrow">The framework</p>
+        <h2>The Seven Pillars of Organizational Standing™</h2>
+      </div>
+      <p class="prose" style="max-width:64ch;margin-top:6px">A BRIDGE Profile™ examines an organization across seven dimensions. Each is rated against independently verified evidence — documenting where an organization stands, not scoring whether it is good enough.</p>
+      <div class="pillars-grid">
+        <div class="pillar"><div class="pn">01</div><h4>Advances Mission</h4><p>Whether the mission genuinely drives the organization's decisions, governance, and use of resources.</p></div>
+        <div class="pillar"><div class="pn">02</div><h4>Impact Spectrum</h4><p>How far the organization has moved from counting activities to understanding and using its own outcomes.</p></div>
+        <div class="pillar"><div class="pn">03</div><h4>Sets Objectives &amp; Makes Progress</h4><p>Whether it sets clear goals, tracks them, and holds itself accountable through governance.</p></div>
+        <div class="pillar"><div class="pn">04</div><h4>Program &amp; Management Resources</h4><p>Whether the people, roles, and systems needed to deliver the work are in place and documented.</p></div>
+        <div class="pillar"><div class="pn">05</div><h4>Fiscal Integrity &amp; Strength</h4><p>Whether financial management is sound, accountable to governance, and appropriately documented.</p></div>
+        <div class="pillar"><div class="pn">06</div><h4>Outputs &amp; Outcomes</h4><p>What the organization has delivered, and the change it can independently demonstrate.</p></div>
+        <div class="pillar"><div class="pn">07</div><h4>Sector Standing &amp; Credibility</h4><p>Whether the organization is recognized by peers and its sector — verified, not self-reported.</p></div>
+        <div class="pillar pillar-brand" aria-hidden="true"><svg viewBox="0 0 144 60"><use href="#mark-d"/></svg></div>
+      </div>
+    </div>
+  </section>
+
   <section id="receive">
     <div class="wrap reveal">
       <div class="sec-head">
@@ -442,7 +480,7 @@
     </div>
 </section>
   
-     <section class="founder" id="founder">
+        <section class="founder" id="founder">
     <div class="wrap reveal">
       <div class="sec-head">
         <div class="rule"></div>
@@ -454,7 +492,7 @@
 
       <p>Veritas Bridge Partners exists to close that gap. We produce an independent, evidence-based account of where an organization stands, so that funders can see clearly what an organization has genuinely built, and organizations are represented accurately, in evidence a funder trusts. We document the evidence; the decision remains yours.</p>
 
-      <div class="team">
+      <div class="team" id="about-founder">
         <p class="eyebrow">Who stands behind the work</p>
 
         <p class="tlede">Veritas Bridge Partners was founded by Joaquín A. Labour-Acosta, an information systems and data intelligence expert whose career spans both technology and institutional philanthropy. He has spent nearly two decades applying data-driven decision frameworks, compliance oversight, and due-diligence practices within major institutions responsible for deploying philanthropic capital — including managing due diligence and compliance across a $270 million national and international grantmaking portfolio at Rockefeller Philanthropy Advisors, and holding grants and operations roles at the Prudential Foundation and the F.B. Heron Foundation. A graduate of the Universidad Nacional Pedro Henríquez Ureña in the Dominican Republic and bilingual in English and Spanish, he built Veritas Bridge Partners to bring the discipline of institutional due diligence to a region where a lack of formal documentation is too often mistaken for a lack of capability.</p>
@@ -477,7 +515,7 @@
       <p class="eyebrow">Start a conversation</p>
       <h2>See a complete demonstration profile.</h2>
       <p>The one-page card, the full report, and the due-diligence review — so you can judge the rigor for yourself.</p>
-      <a class="email" href="mailto:jlabour@veritasbridge.global">hello@veritasbridge.global</a>
+      <a class="email" href="mailto:jlabour@veritasbridge.global">jlabour@veritasbridge.global</a>
       <p class="note">Founding engagements now open · Confidential throughout</p>
     </div>
   </section>
