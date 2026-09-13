@@ -121,6 +121,10 @@
   .adv .nm{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--navy);line-height:1.2}
   .adv .rl{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin:7px 0 11px}
   .adv p{font-size:14.5px;color:#4a4e54;line-height:1.55}
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:26px;margin-top:44px}
+  .step .sn{font-family:var(--mono);font-size:12px;color:var(--terra);letter-spacing:.1em}
+  .step h4{font-size:17px;color:var(--navy);margin:9px 0 8px;line-height:1.2}
+  .step p{font-size:14px;color:#45494F;line-height:1.55}
 
   .contact{background:var(--navy);color:var(--paper)}
   .contact .wrap{padding:80px 28px;text-align:center}
@@ -154,8 +158,7 @@
     .founder .monogram{max-width:210px}
     .adv-grid{grid-template-columns:1fr;gap:24px}
     .motif{display:none}
-    .flow{grid-template-columns:1fr}
-    .step{border-right:0;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .flow{grid-template-columns:1fr;gap:24px}
     .links .navitem{height:auto;display:block;width:100%;border-bottom:1px solid var(--line)}
     .links .navlink{width:100%;justify-content:space-between;padding:14px 0;font-size:14px;border-bottom:0}
     .links .submenu{position:static;box-shadow:none;border:0;min-width:0;background:transparent;padding:0 0 8px 14px}
@@ -165,12 +168,6 @@
   /* --- added sections --- */
   .band-white{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .keyline{font-family:var(--serif);font-size:clamp(19px,2.4vw,24px);color:var(--navy);font-weight:500;line-height:1.34;margin-top:30px;padding-left:24px;border-left:3px solid var(--gold);max-width:62ch}
-  .flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:44px;border-top:1px solid var(--line)}
-  .step{padding:26px 22px 10px;border-right:1px solid var(--line)}
-  .step:last-child{border-right:0}
-  .step .sn{font-family:var(--mono);font-size:12px;color:var(--terra);letter-spacing:.1em}
-  .step h4{font-size:17px;color:var(--navy);margin:10px 0 8px;line-height:1.2}
-  .step p{font-size:13.5px;color:#45494F;line-height:1.55}
   #receive .body{max-width:62ch;margin-top:22px}
   #why .prose{max-width:62ch;margin-top:22px}
   #why .prose p+p{margin-top:16px}
@@ -374,7 +371,7 @@
         <div class="step"><div class="sn">/ 02</div><h4>Evidence gathering</h4><p>We collect documentary evidence across the Seven Pillars — from the organization and from independent sources.</p></div>
         <div class="step"><div class="sn">/ 03</div><h4>Independent verification</h4><p>We confirm what we can without the organization's help: public records, community members, officials, and peers.</p></div>
         <div class="step"><div class="sn">/ 04</div><h4>Contextual analysis</h4><p>We weigh the evidence against the organization's stage, resources, and operating environment.</p></div>
-        <div class="step"><div class="sn">/ 05</div><h4>The Profile</h4><p>We produce the one-page Dimension Card and the full report — what the evidence shows, and how each finding was verified.</p></div>
+        <div class="step"><div class="sn">/ 05</div><h4>The Profile</h4><p>We produce the one-page card and the full report — what the evidence shows, and how each finding was verified.</p></div>
       </div>
     </div>
   </section>
@@ -451,7 +448,7 @@
       <div class="founder-grid">
         <div class="monogram" aria-hidden="true"><svg viewBox="0 0 128 60"><use href="#mark-d"/></svg></div>
         <div>
-          <h2>Nearly two decades of institutional philanthropy, turned into evidence.</h2>
+          <h2>Nearly two decades of institutional philanthropy, turned into evidence.</h2></p>
           <p>Veritas Bridge Partners was founded by Joaquín A. Labour-Acosta, an information systems and data intelligence expert whose career spans both technology and institutional philanthropy. Beginning with the design and implementation of information systems, he later applied data-driven decision frameworks, compliance oversight, and due diligence practices within institutions responsible for deploying philanthropic capital across multiple regions of the world, including Rockefeller Philanthropy Advisors, one of the world's largest philanthropic service organizations.</p>
           <p>Across nearly two decades working at the intersection of grantmaking operations, risk management, compliance, and organizational review, he came to see a persistent gap — not of goodwill, but of shared understanding. Funders are often asked to make consequential decisions without independent evidence equal to the stakes, while the organizations doing the work are just as often unable to show their real strength in terms funders can recognize. The two sides want the same thing and struggle to see each other clearly. Veritas Bridge Partners was founded to close that distance: producing rigorous, independent evidence of where an organization stands, so funders can act with confidence and organizations are understood for what they have genuinely built. We document the evidence; the decision remains yours.</p>
         </div>
@@ -483,7 +480,7 @@
       <p class="eyebrow">Start a conversation</p>
       <h2>See a complete demonstration profile.</h2>
       <p>The one-page card, the full report, and the due-diligence review — so you can judge the rigor for yourself.</p>
-      <a class="email" href="mailto:jlabour@veritasbridge.global">jlabour@veritasbridge.global</a>
+      <a class="email" href="mailto:jlabour@veritasbridge.global">hello@veritasbridge.global</a>
       <p class="note">Founding engagements now open · Confidential throughout</p>
     </div>
   </section>
