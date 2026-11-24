@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
+ charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js')</script>
 <title>Veritas Bridge Partners™ — Posición organizacional basada en evidencia</title>
@@ -196,6 +193,12 @@
   .links .submenu a:hover{opacity:1;background:var(--paper)}
   section[id]{scroll-margin-top:84px}
   #about-founder{scroll-margin-top:96px}
+    /* ===== VBP CHANGE 2026-11-24 (1 of 3) — START: mission and vision styles ===== */
+  #mission{scroll-margin-top:190px}
+  .mv{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-bottom:64px;padding-bottom:56px;border-bottom:1px solid var(--line)}
+  .mv-item{padding-left:24px;border-left:3px solid var(--gold)}
+  .founder .mv-text{font-family:var(--serif);font-size:clamp(19px,2.3vw,23px);color:var(--navy);font-weight:500;line-height:1.38;margin-top:12px;max-width:none}
+  /* ===== VBP CHANGE 2026-11-24 (1 of 3) — END ===== */
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Veritas Bridge Partners","url":"https://veritasbridge.global/","email":"jlabour@veritasbridge.global","description":"Documentación independiente y basada en evidencia de la posición de organizaciones de América Latina y el Caribe, producida para financiadores. Veritas documenta la evidencia; la decisión de financiamiento sigue siendo del financiador.","founder":{"@type":"Person","name":"Joaquín A. Labour-Acosta"},"areaServed":"América Latina y el Caribe","knowsAbout":["debida diligencia organizacional","evaluación de organizaciones sin fines de lucro","verificación independiente","debida diligencia para otorgamiento de fondos"]}
@@ -266,7 +269,8 @@
            <div class="navitem has-sub">
         <button class="navlink" aria-haspopup="true" aria-expanded="false">Nosotros<span class="caret" aria-hidden="true">▾</span></button>
         <div class="submenu">
-          <a href="#founder">Por qué existimos</a>
+                    <!-- VBP CHANGE 2026-11-24 (2 of 3): menu link; previously read «Por qué existimos» -->
+          <a href="#mission">Misión y visión</a>
           <a href="#about-founder">Quién respalda el trabajo</a>
         </div>
       </div>
@@ -505,6 +509,13 @@
 
         <section class="founder" id="founder">
     <div class="wrap reveal">
+      <!-- ===== VBP CHANGE 2026-11-24 (3 of 3) — START: mission and vision block ===== -->
+      <div class="mv" id="mission" role="region" aria-label="Misión y visión">
+        <div class="mv-item"><p class="eyebrow">Nuestra misión</p><p class="mv-text">Hacer visible, a través de evidencia independiente, lo que las organizaciones de la sociedad civil han construido, para que socios y financiadores puedan verlas con claridad y comprenderlas desde el contexto en el que trabajan.</p></div>
+        <div class="mv-item"><p class="eyebrow">Nuestra visión</p><p class="mv-text">Reconstruir la cooperación con la sociedad civil en América Latina y el Caribe sobre un entendimiento más profundo.</p></div>
+      </div>
+      <!-- ===== VBP CHANGE 2026-11-24 (3 of 3) — END ===== -->
+
       <div class="sec-head">
         <div class="rule"></div>
         <p class="eyebrow">Por qué existimos</p>
