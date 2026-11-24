@@ -196,6 +196,13 @@
   .links .submenu a:hover{opacity:1;background:var(--paper)}
   section[id]{scroll-margin-top:84px}
   #about-founder{scroll-margin-top:96px}
+    /* ===== VBP CHANGE 2026-11-24 (1 of 3) — START: mission and vision styles ===== */
+  #mission{scroll-margin-top:96px}
+  .mv{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-bottom:64px;padding-bottom:56px;border-bottom:1px solid var(--line)}
+  .mv-item{padding-left:24px;border-left:3px solid var(--gold)}
+  .founder .mv-text{font-family:var(--serif);font-size:clamp(19px,2.3vw,23px);color:var(--navy);font-weight:500;line-height:1.38;margin-top:12px;max-width:none}
+  /* ===== VBP CHANGE 2026-11-24 (1 of 3) — END ===== */
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Veritas Bridge Partners","url":"https://veritasbridge.global/","email":"jlabour@veritasbridge.global","description":"Independent, evidence-based documentation of Latin American and Caribbean organizations' standing, produced for funders. Veritas documents the evidence; the funding decision remains the funder's.","founder":{"@type":"Person","name":"Joaquín A. Labour-Acosta"},"areaServed":"Latin America and the Caribbean","knowsAbout":["organizational due diligence","nonprofit assessment","independent verification","grantmaking due diligence"]}
@@ -266,7 +273,8 @@
            <div class="navitem has-sub">
         <button class="navlink" aria-haspopup="true" aria-expanded="false">About<span class="caret" aria-hidden="true">▾</span></button>
         <div class="submenu">
-          <a href="#founder">Why we exist</a>
+                    <!-- VBP CHANGE 2026-11-24 (2 of 3): menu link; previously read «Why we exist» -->
+          <a href="#mission">Mission &amp; vision</a>
           <a href="#about-founder">Who stands behind the work</a>
         </div>
       </div>
@@ -505,6 +513,12 @@
   
         <section class="founder" id="founder">
     <div class="wrap reveal">
+            <!-- ===== VBP CHANGE 2026-11-24 (3 of 3) — START: mission and vision block ===== -->
+      <div class="mv" id="mission" role="region" aria-label="Mission and vision">
+        <div class="mv-item"><p class="eyebrow">Our mission</p><p class="mv-text">To make visible, through independent evidence, what civil society organizations have built, so that partners and funders can see and understand them clearly in the context in which the organizations work.</p></div>
+        <div class="mv-item"><p class="eyebrow">Our vision</p><p class="mv-text">To rebuild cooperation with civil society in Latin America and the Caribbean on a foundation of deeper understanding.</p></div>
+      </div>
+      <!-- ===== VBP CHANGE 2026-11-24 (3 of 3) — END ===== -->
       <div class="sec-head">
         <div class="rule"></div>
         <p class="eyebrow">Why we exist</p>
